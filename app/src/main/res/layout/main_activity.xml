@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="id.dgd.kinginternational.MainActivity">
+
+    <!-- custom toolbar -->
+    <include
+        android:id="@+id/main_toolbar"
+        layout="@layout/main_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- background -->
+            <!-- header -->
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="175dp">
+
+                <!-- viewpager -->
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/main_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <!-- viewpager indicator -->
+                <LinearLayout
+                    android:id="@+id/main_viewpager_indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal" />
+
+            </RelativeLayout>
+
+            <!-- foreground -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!-- blank -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:background="@android:color/transparent" />
+
+                <!-- body -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <!-- first row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:baselineAligned="false"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <!-- pesawat -->
+                        <LinearLayout
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:background="@drawable/bg_white"
+                            android:gravity="center"
+                            android:onClick="pesawatBtn"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/btn_pesawat"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_marginBottom="4dp"
+                                android:background="@android:color/transparent"
+                                android:contentDescription="@string/desc_pesawat"
+                                android:onClick="pesawatBtn"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ic_pesawat" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="pesawatBtn"
+                                android:text="@string/text_pesawat"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <!-- kereta -->
+                        <LinearLayout
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/bg_white"
+                            android:gravity="center"
+                            android:onClick="keretaBtn"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/btn_kereta"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_marginBottom="4dp"
+                                android:background="@android:color/transparent"
+                                android:contentDescription="@string/desc_kereta"
+                                android:onClick="keretaBtn"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ic_kereta" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="keretaBtn"
+                                android:text="@string/text_kereta"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <!-- hotel -->
+                        <LinearLayout
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:background="@drawable/bg_white"
+                            android:gravity="center"
+                            android:onClick="hotelBtn"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/btn_hotel"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_marginBottom="4dp"
+                                android:background="@android:color/transparent"
+                                android:contentDescription="@string/desc_hotel"
+                                android:onClick="hotelBtn"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ic_hotel" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="hotelBtn"
+                                android:text="@string/text_hotel"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- second row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:baselineAligned="false"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <!-- umroh -->
+                        <LinearLayout
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:background="@drawable/bg_white"
+                            android:gravity="center"
+                            android:onClick="umrohBtn"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/btn_umroh"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_marginBottom="4dp"
+                                android:background="@android:color/transparent"
+                                android:contentDescription="@string/desc_umroh"
+                                android:onClick="umrohBtn"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ic_umroh" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="umrohBtn"
+                                android:text="@string/text_umroh"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <!-- bus -->
+                        <LinearLayout
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/bg_white"
+                            android:gravity="center"
+                            android:onClick="busBtn"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/btn_bus"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_marginBottom="4dp"
+                                android:background="@android:color/transparent"
+                                android:contentDescription="@string/desc_bus"
+                                android:onClick="busBtn"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ic_bus" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="busBtn"
+                                android:text="@string/text_bus"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <!-- transport -->
+                        <LinearLayout
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:background="@drawable/bg_white"
+                            android:gravity="center"
+                            android:onClick="transportBtn"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/btn_transport"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_marginBottom="4dp"
+                                android:background="@android:color/transparent"
+                                android:contentDescription="@string/desc_transport"
+                                android:onClick="transportBtn"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ic_transport" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="transportBtn"
+                                android:text="@string/text_transport"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- third row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:baselineAligned="false"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <!-- ppob -->
+                        <LinearLayout
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:background="@drawable/bg_white"
+                            android:gravity="center"
+                            android:onClick="ppobBtn"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/btn_ppob"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_marginBottom="4dp"
+                                android:background="@android:color/transparent"
+                                android:contentDescription="@string/desc_ppob"
+                                android:onClick="ppobBtn"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ic_ppob" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="ppobBtn"
+                                android:text="@string/text_ppob"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <!-- pulsa -->
+                        <LinearLayout
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/bg_white"
+                            android:gravity="center"
+                            android:onClick="pulsaBtn"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/btn_pulsa"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_marginBottom="4dp"
+                                android:background="@android:color/transparent"
+                                android:contentDescription="@string/desc_pulsa"
+                                android:onClick="pulsaBtn"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ic_pulsa" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="pulsaBtn"
+                                android:text="@string/text_pulsa"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <!-- tur -->
+                        <LinearLayout
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:background="@drawable/bg_white"
+                            android:gravity="center"
+                            android:onClick="turBtn"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/btn_tur"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_marginBottom="4dp"
+                                android:background="@android:color/transparent"
+                                android:contentDescription="@string/desc_tur"
+                                android:onClick="turBtn"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ic_tur" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="turBtn"
+                                android:text="@string/text_tur"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- fourth row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <!-- agen -->
+                        <LinearLayout
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:background="@drawable/bg_white"
+                            android:gravity="center"
+                            android:onClick="agenBtn"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/btn_agen"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_marginBottom="4dp"
+                                android:background="@android:color/transparent"
+                                android:contentDescription="@string/desc_agen"
+                                android:onClick="agenBtn"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ic_agen" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="agenBtn"
+                                android:text="@string/text_agen"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <!-- kontak -->
+                        <LinearLayout
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/bg_white"
+                            android:gravity="center"
+                            android:onClick="kontakBtn"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/btn_kontak"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_marginBottom="4dp"
+                                android:background="@android:color/transparent"
+                                android:contentDescription="@string/text_kontak"
+                                android:onClick="kontakBtn"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ic_kontak" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="kontakBtn"
+                                android:text="@string/text_kontak"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <!-- keluar -->
+                        <LinearLayout
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:background="@drawable/bg_white"
+                            android:gravity="center"
+                            android:onClick="keluarBtn"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/btn_keluar"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="4dp"
+                                android:background="@android:color/transparent"
+                                android:contentDescription="@string/text_keluar"
+                                android:onClick="keluarBtn"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ic_keluar" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="keluarBtn"
+                                android:text="@string/text_keluar"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>
